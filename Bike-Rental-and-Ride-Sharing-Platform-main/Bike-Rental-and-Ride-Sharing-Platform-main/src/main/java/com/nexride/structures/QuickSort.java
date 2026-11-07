@@ -18,7 +18,6 @@ public final class QuickSort {
     }
 
     private static <T> void quickSort(List<T> a, int low, int high, Comparator<? super T> order) {
-        // Recurse into the smaller half and loop on the larger one to keep the stack
         while (low < high) {
             int p = partition(a, low, high, order);
             if (p - low < high - p) {
@@ -33,7 +32,7 @@ public final class QuickSort {
 
     private static <T> int partition(List<T> a, int low, int high, Comparator<? super T> order) {
         int mid = low + (high - low) / 2;
-        // Order a[low], a[mid], a[high] so the median ends up at mid, then park it at high.
+
         if (order.compare(a.get(mid), a.get(low)) < 0) swap(a, mid, low);
         if (order.compare(a.get(high), a.get(low)) < 0) swap(a, high, low);
         if (order.compare(a.get(high), a.get(mid)) < 0) swap(a, high, mid);
