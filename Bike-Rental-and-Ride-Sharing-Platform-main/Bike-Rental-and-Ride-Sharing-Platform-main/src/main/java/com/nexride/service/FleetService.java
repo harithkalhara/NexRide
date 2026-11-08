@@ -22,7 +22,6 @@ public class FleetService {
     return list(query, kind, city, start, end, null);
   }
 
-  /** Ordering for the availability list: "low"/"high" daily rate, or "name"; otherwise unsorted. */
   private static Comparator<Vehicle> orderFor(String sort) {
     if (sort == null) return null;
     Comparator<Vehicle> byName =
@@ -82,7 +81,7 @@ public class FleetService {
                                                                                     && !pickup.isAfter(
                                                                                     java.time.LocalDate.parse(r.getEndDate()))))
                                     .toList());
-    // Availability is ordered with our own quick sort (see structures.QuickSort).
+
     return order == null ? available : QuickSort.sorted(available, order);
   }
 
