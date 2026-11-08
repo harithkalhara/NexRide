@@ -1,6 +1,6 @@
 package com.nexride.Model;
 
-public class Issue {
+public class Issue extends BaseEntity{
 
     // Instance Variables
     private String userId = "";
