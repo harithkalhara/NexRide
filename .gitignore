@@ -1,0 +1,7 @@
+.idea/
+*.iml
+Billing-Transfer/
+target/
+*.class
+
+marked with NexRide-Studio*
