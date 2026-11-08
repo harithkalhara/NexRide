@@ -1,4 +1,4 @@
-package com.nexride.Model;
+package com.nexride.model;
 
 public class Issue {
 

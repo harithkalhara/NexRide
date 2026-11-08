@@ -1,4 +1,4 @@
-package com.nexride.Service;
+package com.nexride.service;
 
 import com.nexride.model.*;
 import com.nexride.repository.StateRepository;
