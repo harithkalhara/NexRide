@@ -1,0 +1,28 @@
+NEXRIDE STUDIO 03 — NEW ORANGE / NAVY / IVORY DESIGN
+
+1. Extract ALL the ZIP files to a new folder.
+2. Double-click START-NEXRIDE.bat.
+3. The website opens automatically. Maven is NOT required.
+4. Admin: double-click ADMIN-LOGIN.bat.
+5. First admin email/password: data\admin-access.txt.
+6. Stop the server: double-click STOP-NEXRIDE.bat.
+
+The new homepage says "Your island. Your pace."
+The footer says "STUDIO / 03".
+
+The launcher automatically finds a FREE PORT.
+Do not use an old 8080/8081 browser bookmark.
+OPEN-WEBSITE.txt contains the correct address after startup.
+
+Java 17 or newer is required. Your installed Java is used.
+If startup fails, see nexride-startup.log and nexride-errors.log.
+
+Manual fallback from this folder:
+java -jar NexRide.jar --server.port=0
+Then read the "Tomcat started on port" line and open that port.
+
+Keep the data folder to preserve accounts, bookings and photos.
+Real card payments need PayHere merchant credentials and public HTTPS hosting.
+Full instructions: README.md
+
+User sign in: double-click USER-LOGIN.bat. It starts or reuses this project and opens /login on its actual port. Customer login accepts registered email or phone and password. /#login and /signin also work. Admin login remains separate.
