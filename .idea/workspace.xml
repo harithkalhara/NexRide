@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66461145-44a9-48a6-a1b7-dcf0e2a9a694" name="Changes" comment="changed" />
+    <list default="true" id="66461145-44a9-48a6-a1b7-dcf0e2a9a694" name="Changes" comment="changed">
+      <change afterPath="$PROJECT_DIR$/NexRide-Studio/src/main/java/com/nexride/controller/AuthController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/user-management" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,10 +56,10 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.NexRideApplication.executor": "Run",
-    "git-widget-placeholder": "#7 on dev",
+    "git-widget-placeholder": "#1 on feature/user-management",
     "javascript.preferred.runtime.type.id": "node",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/harit/OneDrive/Desktop/NexRide-IntelliJ-Full-Project-Ready",
+    "last_opened_file_path": "C:/Users/harit/OneDrive/Desktop/NexRide-IntelliJ-Full-Project-Ready/NexRide-Studio/src/main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -68,6 +70,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\harit\OneDrive\Desktop\NexRide-IntelliJ-Full-Project-Ready\NexRide-Studio\src\main" />
+      <recent name="C:\Users\harit\OneDrive\Desktop\NexRide-IntelliJ-Full-Project-Ready\NexRide-Studio\src\main\java\com\nexride\service" />
+      <recent name="C:\Users\harit\OneDrive\Desktop\NexRide-IntelliJ-Full-Project-Ready\NexRide-Studio\src\main\java\com\nexride" />
+      <recent name="C:\Users\harit\OneDrive\Desktop\NexRide-IntelliJ-Full-Project-Ready\NexRide-Studio\src\main\java\com\nexride\config" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="NexRideApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.nexride.NexRideApplication" />
@@ -110,7 +120,7 @@
       <workItem from="1794061817756" duration="9977000" />
       <workItem from="1794135943049" duration="5374000" />
       <workItem from="1794151071630" duration="4639000" />
-      <workItem from="1794198643736" duration="1051000" />
+      <workItem from="1794198643736" duration="4794000" />
     </task>
     <task id="LOCAL-00001" summary="committing main">
       <option name="closed" value="true" />
