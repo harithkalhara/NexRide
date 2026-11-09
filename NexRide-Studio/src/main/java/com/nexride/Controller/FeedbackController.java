@@ -1,4 +1,4 @@
-package com.nexride.Controller;
+package com.nexride.controller;
 
 import com.nexride.model.User;
 import com.nexride.service.*;

@@ -144,6 +144,18 @@ function updateEstimate() {
 }
 
 ("use strict");
+
+// Apply the saved/system theme from the external script so the page complies
+// with the Content-Security-Policy (which intentionally blocks inline scripts).
+try {
+  document.documentElement.dataset.theme =
+    localStorage.getItem("nexride-theme") ||
+    (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light");
+} catch (_) {
+  document.documentElement.dataset.theme = "light";
+}
 const $ = (q, root = document) => root.querySelector(q),
   $$ = (q, root = document) => [...root.querySelectorAll(q)];
 let me = null,

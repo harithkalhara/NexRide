@@ -1,4 +1,4 @@
-package com.nexride.Service;
+package com.nexride.service;
 
 import java.awt.image.BufferedImage;
 import java.io.*;

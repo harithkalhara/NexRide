@@ -2,6 +2,7 @@ package com.nexride.controller;
 
 import com.nexride.service.ApiException;
 import java.util.Map;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,7 @@ public class ApiErrors {
 
   @ExceptionHandler(Exception.class)
   public ResponseEntity<?> unexpected(Exception e) {
+    LoggerFactory.getLogger(ApiErrors.class).error("Unhandled API error", e);
     return ResponseEntity.internalServerError()
         .body(Map.of("message", "NexRide could not complete that request."));
   }
