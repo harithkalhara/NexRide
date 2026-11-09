@@ -12,6 +12,7 @@ public class FeedbackController {
     private final UserService users;
     private final FeedbackService feedback;
 
+    // Inject user and feedback services
     public FeedbackController(
             UserService users,
             FeedbackService feedback) {
@@ -20,6 +21,7 @@ public class FeedbackController {
         this.feedback = feedback;
     }
 
+    // Validate user session
     private User require(HttpServletRequest req) {
         Object id = req.getSession(false) == null
                 ? null
@@ -46,11 +48,13 @@ public class FeedbackController {
             String reply,
             String status) {}
 
+    // Get all reviews
     @GetMapping("/reviews")
     public Object reviewList() {
         return feedback.reviews();
     }
 
+    // Create a new vehicle review
     @PostMapping("/reviews")
     public Object createReview(
             @RequestBody ReviewRequest r,
@@ -63,11 +67,13 @@ public class FeedbackController {
                 r.comment());
     }
 
+    // Get issues for the current user
     @GetMapping("/issues")
     public Object issueList(HttpServletRequest req) {
         return feedback.issues(require(req));
     }
 
+    // Create a new support issue
     @PostMapping("/issues")
     public Object createIssue(
             @RequestBody IssueRequest i,
@@ -80,6 +86,7 @@ public class FeedbackController {
                 i.description());
     }
 
+    // Resolve or update an issue decision
     @PutMapping("/issues/{id}/decision")
     public Object issueDecision(
             @PathVariable String id,
