@@ -1,0 +1,21 @@
+services:
+  nexride:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8095:8080"
+    volumes:
+      - nexride-data:/app/data
+    environment:
+      SERVER_ADDRESS: 0.0.0.0
+      SERVER_PORT: 8080
+      NEXRIDE_DATA_DIR: /app/data
+      NEXRIDE_ADMIN_EMAIL: ${NEXRIDE_ADMIN_EMAIL:-admin@nexride.local}
+      NEXRIDE_ADMIN_PASSWORD: ${NEXRIDE_ADMIN_PASSWORD:-}
+      NEXRIDE_PUBLIC_URL: ${NEXRIDE_PUBLIC_URL:-}
+      PAYHERE_MODE: ${PAYHERE_MODE:-disabled}
+      PAYHERE_MERCHANT_ID: ${PAYHERE_MERCHANT_ID:-}
+      PAYHERE_MERCHANT_SECRET: ${PAYHERE_MERCHANT_SECRET:-}
+      SESSION_COOKIE_SECURE: ${SESSION_COOKIE_SECURE:-false}
+volumes:
+  nexride-data:

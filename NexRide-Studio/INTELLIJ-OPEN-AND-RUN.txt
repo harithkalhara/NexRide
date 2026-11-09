@@ -1,0 +1,14 @@
+NEXRIDE — FULL INTELLIJ PROJECT
+
+OPEN THIS FOLDER IN INTELLIJ
+1. Extract the ZIP.
+2. In IntelliJ IDEA choose File > Open.
+3. Select the extracted NexRide-Studio folder — the folder containing pom.xml.
+4. Choose Trust Project / Load Maven Project if prompted.
+5. Wait for Maven to download project libraries.
+6. In the Project panel, expand src > main > java > com.nexride to see every editable Java class. Expand src > test > java to see the test classes.
+
+RUN THE WEBSITE
+Use JDK 17 in File > Project Structure > Project SDK. Open src/main/java/com/nexride/NexRideApplication.java and click the green Run triangle next to the main method. The local app uses http://localhost:8095.
+
+The project contains source .java files, Maven configuration, HTML/CSS/JS assets, image assets, and tests. IntelliJ creates compiled .class files under target after building; those are generated files and are not included in this source archive. You do not need to install Maven separately: use IntelliJ's Maven integration or the included mvnw.cmd wrapper. Maven dependencies need an internet connection the first time.
