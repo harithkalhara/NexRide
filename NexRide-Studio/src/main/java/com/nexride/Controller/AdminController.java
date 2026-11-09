@@ -14,6 +14,7 @@ public class AdminController {
     private final StateRepository repo;
     private final UserService users;
 
+    // Inject repository and user services
     public AdminController(
             StateRepository repo,
             UserService users) {
@@ -22,6 +23,7 @@ public class AdminController {
         this.users = users;
     }
 
+    // Validate session and enforce admin access
     private User require(HttpServletRequest req) {
         Object id = req.getSession(false) == null
                 ? null
@@ -42,6 +44,7 @@ public class AdminController {
         return user;
     }
 
+    // Map user details to a response view
     private Map<String, Object> view(User u) {
         Map<String, Object> x = new java.util.LinkedHashMap<>();
 
@@ -60,6 +63,7 @@ public class AdminController {
 
     public record UserStatus(boolean active) {}
 
+    // Get administrative summary metrics
     @GetMapping("/summary")
     public Object adminSummary(HttpServletRequest req) {
 
@@ -87,6 +91,7 @@ public class AdminController {
                         "users", s.getUsers().size()));
     }
 
+    // List all customer users
     @GetMapping("/users")
     public Object adminUsers(HttpServletRequest req) {
 
@@ -98,6 +103,7 @@ public class AdminController {
                 .toList();
     }
 
+    // Update user active status
     @PutMapping("/users/{id}/status")
     public Object adminUserStatus(
             @PathVariable String id,
