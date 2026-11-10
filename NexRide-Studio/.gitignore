@@ -1,0 +1,9 @@
+/target/
+/data/
+/node_modules/
+*.log
+.runtime.json
+OPEN-WEBSITE.txt
+.env
+NexRide.jar
+*.zip

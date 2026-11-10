@@ -1,0 +1,1 @@
+{"name":"nexride-studio-ui-tests","private":true,"version":"3.0.0","scripts":{"test:ui":"node qa/ui-smoke.cjs"},"devDependencies":{"jsdom":"26.1.0"}}
